@@ -5,10 +5,10 @@ export default function Navigation() {
     <>
       <nav className="">
         <ul className="flex justify-center gap-10 m-11">
-          <li className=" hover:text-pink-500 text-xl">
+          <li className=" hover:text-pink-500 text-xl md:text-2xl lg:text-3xl">
             <NavLink to="/">Home</NavLink>
           </li>
-          <li className=" hover:text-pink-500 text-xl">
+          <li className=" hover:text-pink-500 text-xl md:text-2xl lg:text-3xl">
             <NavLink to="/notes">My Notes</NavLink>
           </li>
         </ul>
