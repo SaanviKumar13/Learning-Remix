@@ -1,5 +1,7 @@
+import { deleteNote } from "~/data/helper";
+
 export type Note = {
-  id: number;
+  id: string;
   title: string;
   content: string;
 };
@@ -16,9 +18,15 @@ export default function NoteList({ notes }: NoteType) {
           key={index}
           className="bg-gray-100 h-44 overflow-y-scroll w-[80vw] md:w-[40vw] lg:w-[35vw] p-5 rounded-lg m-2"
         >
-          <h1 className="text-gray-800 text-center font-semibold text-xl">
-            {note.title}
-          </h1>
+          <div className="flex flex-row justify-between">
+            <h1 className="text-gray-800 text-center font-semibold text-xl">
+              {note.title}
+            </h1>
+            <p onClick={() => deleteNote(note.id)}>
+              <img src="bin-icon.svg" alt="delete" className="w-5 h-5" />
+            </p>
+          </div>
+
           <p className="font-extralight text-gray-800">{note.content}</p>
         </div>
       ))}
