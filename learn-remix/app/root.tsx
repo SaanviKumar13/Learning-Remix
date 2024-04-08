@@ -7,7 +7,7 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
-import stylesheet from "~/tailwind.css"; //~ symbol always refers to the app folder
+import stylesheet from "~/globals.css";
 import Navigation from "./components/Navigation";
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: stylesheet },
@@ -22,15 +22,17 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <header className="bg-purple-200">
-        <Navigation />
-      </header>
-      <body className="bg-purple-200">
-        <Outlet />
-        <ScrollRestoration />
-        <Scripts />
-        <LiveReload />
-      </body>
+      <div className="font-mono min-h-screen h-full bg-waves bg-no-repeat bg-cover w-full overflow-hidden">
+        <header>
+          <Navigation />
+        </header>
+        <body>
+          <Outlet />
+          <ScrollRestoration />
+          <Scripts />
+          <LiveReload />
+        </body>
+      </div>
     </html>
   );
 }

@@ -11,14 +11,16 @@ export interface NoteType {
 export default function NoteList({ notes }: NoteType) {
   return (
     <>
-      <div className="absolute top-2/3 mt-10 md:top-1/3 md:mt-96 md:ml-32 flex flex-row gap-5 flex-wrap items-center">
+      <div className="flex flex-row gap-5 flex-wrap items-center justify-center m-5">
         {notes.map((note: Note, index: number) => (
-          <div className="bg-pink-100 h-64 w-44 p-5 rounded-lg m-2">
-            <h1 className="text-pink-700 text-center font-semibold text-xl">
+          <div
+            key={index}
+            className="bg-gray-100 h-44 overflow-y-scroll w-[30vw] p-5 rounded-lg m-2"
+          >
+            <h1 className="text-gray-800 text-center font-semibold text-xl">
               {note.title}
             </h1>
-            <p className="font-extralight">{note.content}</p>
-            {/* <button className="font-extralight text-xs">Delete Note</button> */}
+            <p className="font-extralight text-gray-800">{note.content}</p>
           </div>
         ))}
       </div>

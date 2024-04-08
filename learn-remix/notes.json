@@ -1,1 +1,29 @@
-{"notes":[{"title":"Test","content":"Testing....","id":"2023-07-05T08:07:00.737Z"},{"title":"Hello","content":"Hi, this is a notes app that is made using Remix, Tailwind and Typescript.","id":"2023-07-05T08:33:25.390Z"},{"title":"heheeh","content":"djcudj","id":"2023-07-05T08:38:26.159Z"},{"title":"test 2","content":"blah blah blah\r\n","id":"2023-07-05T08:40:42.264Z"}]}
+{
+    "notes": [
+      {
+        "title": "Important Meeting",
+        "content": "Don't forget about the meeting at 10 AM tomorrow.",
+        "id": "2024-04-08T08:00:00.000Z"
+      },
+      {
+        "title": "Shopping List",
+        "content": "Milk, eggs, bread, and bananas.",
+        "id": "2024-04-08T09:00:00.000Z"
+      },
+      {
+        "title": "Book Recommendation",
+        "content": "Just finished an amazing book called 'The Silent Patient' by Alex Michaelides.",
+        "id": "2024-04-08T10:00:00.000Z"
+      },
+      {
+        "title": "Workout Plan",
+        "content": "30 minutes of cardio, followed by 20 minutes of strength training.",
+        "id": "2024-04-08T11:00:00.000Z"
+      },
+      {
+        "title": "Recipe Idea",
+        "content": "Thinking of trying out a new pasta recipe with pesto sauce and cherry tomatoes.",
+        "id": "2024-04-08T12:00:00.000Z"
+      }
+    ]
+  }

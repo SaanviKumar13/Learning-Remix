@@ -29,12 +29,10 @@ export const meta: V2_MetaFunction = () => {
 export default function NotePage() {
   const notes = useLoaderData(); //it is a hook which gives us access to data given by loader
   return (
-    <>
-      <main>
-        <NewNote />
-        <NoteList notes={notes} />
-      </main>
-    </>
+    <div className="flex flex-col justify-between items-center mt-10">
+      <NewNote />
+      <NoteList notes={notes} />
+    </div>
   );
 }
 
