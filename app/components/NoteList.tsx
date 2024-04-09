@@ -1,4 +1,4 @@
-import { deleteNote } from "~/data/helper";
+import { deleteNote } from "~/utils/helper";
 
 export type Note = {
   id: string;
