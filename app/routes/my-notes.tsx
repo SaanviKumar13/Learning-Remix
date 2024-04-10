@@ -5,6 +5,7 @@ import {
   redirect,
 } from "@remix-run/node";
 import { Form, Link, useLoaderData } from "@remix-run/react";
+import NoteCard from "~/components/NoteCard";
 import { deleteNote, getNotes } from "~/utils/notes.server";
 import { isSignedIn, getSession } from "~/utils/session.server";
 
@@ -49,7 +50,7 @@ export default function NoteList() {
   const notes = useLoaderData();
 
   return (
-    <div className="flex flex-row gap-5 flex-wrap items-center justify-center m-5">
+    <div className="flex flex-row gap-5 box-border flex-wrap items-start justify-center p-5">
       {notes.length === 0 ? (
         <div className="flex flex-col min-h-[70vh] h-full gap-10 items-center justify-center">
           <h1 className="text-xl">No notes yet, create a note.</h1>
@@ -70,21 +71,10 @@ export default function NoteList() {
       ) : (
         notes.map((note: Note, index: number) => (
           <div
+            className="flex flex-col md:flex-row flex-wrap gap-1"
             key={index}
-            className="bg-gray-100 h-44 overflow-y-scroll w-[80vw] md:w-[40vw] lg:w-[35vw] p-5 rounded-lg m-2"
           >
-            <div className="flex flex-row justify-between">
-              <h1 className="text-gray-800 text-center font-semibold text-xl">
-                {note.title}
-              </h1>
-              <Form method="post">
-                <input type="text" name="noteId" value={note.id} hidden />
-                <button type="submit">
-                  <img src="bin-icon.svg" alt="delete" className="w-5 h-5" />
-                </button>
-              </Form>
-            </div>
-            <p className="font-extralight text-gray-800">{note.content}</p>
+            <NoteCard id={note.id} title={note.title} content={note.content} />
           </div>
         ))
       )}

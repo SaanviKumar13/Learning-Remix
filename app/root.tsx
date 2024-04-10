@@ -28,7 +28,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <div className="font-mono min-h-screen h-full bg-waves bg-no-repeat bg-cover w-full overflow-hidden">
+      <div className="font-mono min-h-screen h-full bg-waves bg-no-repeat bg-cover w-full">
         <header>
           <Navigation />
         </header>

@@ -45,8 +45,8 @@ export async function action({ request }: ActionArgs) {
 
 export default function NewNote() {
   return (
-    <div className="w-full min-h-[70vh] h-full flex flex-col items-center justify-center">
-      <div className="w-[40vw] flex flex-col">
+    <div className="w-full box-border mt-10 flex flex-col items-center justify-center">
+      <div className="w-[90vw] md:w-[40vw] flex flex-col">
         <Form
           method="post"
           className="p-5 rounded-2xl bg-gray-50 shadow-box-shadow"
