@@ -106,7 +106,7 @@ export default function LoginPage() {
           >
             Log in
           </button>
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-center">
             <div className="text-center text-sm text-gray-500">
               Don't have an account?{" "}
               <Link className="text-gray-500 underline" to="/sign-up">
