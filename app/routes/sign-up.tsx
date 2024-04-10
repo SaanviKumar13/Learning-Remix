@@ -6,7 +6,6 @@ import {
 } from "@remix-run/node";
 import { useActionData, Form, Link, V2_MetaFunction } from "@remix-run/react";
 import { createUserSession, getSession, signUp } from "~/utils/session.server";
-export const config = { runtime: "edge" };
 interface ActionData {
   errors: string;
 }

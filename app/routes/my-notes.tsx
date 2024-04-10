@@ -8,7 +8,6 @@ import { Link, useLoaderData } from "@remix-run/react";
 import NoteCard from "~/components/NoteCard";
 import { deleteNote, getNotes } from "~/utils/notes.server";
 import { isSignedIn, getSession } from "~/utils/session.server";
-export const config = { runtime: "edge" };
 
 export type Note = {
   id: string;
