@@ -7,7 +7,7 @@ import {
   LoaderFunction,
   V2_MetaFunction,
 } from "@remix-run/node";
-
+export const config = { runtime: "edge" };
 export const meta: V2_MetaFunction = () => {
   return [
     { title: "Note-Worthy | Login" },

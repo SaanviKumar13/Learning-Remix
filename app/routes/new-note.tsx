@@ -8,6 +8,7 @@ import {
 import { getSession, isSignedIn } from "~/utils/session.server";
 import { createNote } from "~/utils/notes.server";
 import { Form } from "@remix-run/react";
+export const config = { runtime: "edge" };
 
 interface ActionData {
   errors?: string;

@@ -1,6 +1,7 @@
 import { type V2_MetaFunction } from "@remix-run/node";
 import { Link } from "@remix-run/react";
 import { Player } from "@lottiefiles/react-lottie-player";
+export const config = { runtime: "edge" };
 
 export const meta: V2_MetaFunction = () => {
   return [
