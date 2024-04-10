@@ -1,6 +1,6 @@
 -- CreateTable
 CREATE TABLE "User" (
-    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "id" TEXT NOT NULL PRIMARY KEY,
     "username" TEXT NOT NULL,
     "password" TEXT NOT NULL,
     "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
@@ -8,11 +8,11 @@ CREATE TABLE "User" (
 
 -- CreateTable
 CREATE TABLE "Note" (
-    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "id" TEXT NOT NULL PRIMARY KEY,
     "title" TEXT NOT NULL,
     "content" TEXT NOT NULL,
-    "authorId" INTEGER NOT NULL,
-    CONSTRAINT "Note_authorId_fkey" FOREIGN KEY ("authorId") REFERENCES "User" ("id") ON DELETE RESTRICT ON UPDATE CASCADE
+    "userId" TEXT NOT NULL,
+    CONSTRAINT "Note_userId_fkey" FOREIGN KEY ("userId") REFERENCES "User" ("username") ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 -- CreateIndex

@@ -49,7 +49,7 @@ export const action: ActionFunction = async ({ request }) => {
   if (!userId.success) {
     return json<ActionData>({ errors: userId.error }, { status: 400 });
   }
-  return await createUserSession(username as string, "/notes");
+  return await createUserSession(username as string, "/my-notes");
 };
 
 export default function SignUp() {

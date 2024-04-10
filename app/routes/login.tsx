@@ -20,7 +20,6 @@ interface ActionData {
 }
 export const loader: LoaderFunction = async ({ request }) => {
   const session = await getSession(request.headers.get("Cookie"));
-
   if (session.has("userId")) {
     return redirect("/");
   }
@@ -53,7 +52,7 @@ export const action: ActionFunction = async ({ request }) => {
     return json<ActionData>({ errors: userId.error }, { status: 400 });
   }
 
-  return await createUserSession(username as string, "/notes");
+  return await createUserSession(username as string, "/my-notes");
 };
 export default function LoginPage() {
   const actionData = useActionData();

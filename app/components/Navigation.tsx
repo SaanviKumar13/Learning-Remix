@@ -8,7 +8,10 @@ export default function Navigation() {
           <NavLink to="/">Home</NavLink>
         </li>
         <li className="hover:text-slate-50 text-xl">
-          <NavLink to="/notes">My Notes</NavLink>
+          <NavLink to="/new-note">Create Note</NavLink>
+        </li>
+        <li className="hover:text-slate-50 text-xl">
+          <NavLink to="/my-notes">My Notes</NavLink>
         </li>
         {signedIn && (
           <Form action="/logout" method="post">
