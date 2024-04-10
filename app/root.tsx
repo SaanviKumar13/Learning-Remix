@@ -1,4 +1,4 @@
-import type { LinksFunction } from "@remix-run/node";
+import type { LinksFunction, LoaderFunction } from "@remix-run/node";
 import {
   Links,
   LiveReload,
@@ -9,9 +9,15 @@ import {
 } from "@remix-run/react";
 import stylesheet from "~/globals.css";
 import Navigation from "./components/Navigation";
+import { isSignedIn } from "./utils/session.server";
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: stylesheet },
 ];
+
+export const loader: LoaderFunction = async ({ request }) => {
+  const signedIn = await isSignedIn(request);
+  return signedIn;
+};
 
 export default function App() {
   return (

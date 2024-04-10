@@ -1,11 +1,12 @@
 import { V2_MetaFunction } from "@remix-run/react";
-import { LoaderArgs } from "@remix-run/node";
+import { LoaderArgs, redirect } from "@remix-run/node";
 import NewNote from "~/components/NewNote";
-import { requireUserId } from "~/utils/session.server";
+import { isSignedIn } from "~/utils/session.server";
 
 export async function loader({ request }: LoaderArgs) {
-  const userId = await requireUserId(request);
-  return userId;
+  const signedIn = await isSignedIn(request);
+  if (!signedIn) return redirect("/sign-up");
+  return null;
 }
 
 export const meta: V2_MetaFunction = () => {
