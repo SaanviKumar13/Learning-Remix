@@ -14,4 +14,4 @@ Welcome to Note-Worthy, a simple note-taking web application where you can jot d
 - **React**
 - **Tailwind CSS**
 - **Prisma**
-- **SQLite**
+- **Supabase**
