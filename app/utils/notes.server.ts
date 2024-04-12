@@ -8,7 +8,7 @@ export async function getNotes(username: string) {
       });
       return { success: true, data: notes };
     } catch (error) {
-      console.error("Error fetching notes:", error);
+    
       return { success: false, message: "Error fetching notes." };
     }
   }
@@ -45,7 +45,7 @@ export async function createNote({
       });
       return { success: true, message: "Note created successfully!" };
     } catch (error) {
-      console.error("Error creating note:", error);
+     
       return { success: false, message: "Error in creating note." };
     }
   }
@@ -58,7 +58,7 @@ export async function createNote({
       });
       return { success: true, message: "Note deleted successfully!" };
     } catch (error) {
-      console.error("Error deleting note:", error);
+     
       return { success: false, message: "Error in deleting note." };
     }
   }

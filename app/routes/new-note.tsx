@@ -37,7 +37,7 @@ export async function action({ request }: ActionArgs) {
     content: content as string,
     username,
   });
-  console.log(noteRes);
+
   if (!noteRes.success)
     return json<ActionData>({ errors: noteRes.message }, { status: 400 });
   return redirect("/my-notes");
